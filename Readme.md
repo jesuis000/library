@@ -47,7 +47,7 @@ A Spring Boot RESTful API for managing a book library with Docker support.
 ### Build and Run
 ```bash
 # Clone the repository
-git clone <your-repo-url>
+git clone https://github.com/jesuis000/library.git
 cd library-management-api
 
 # Build the Docker image
