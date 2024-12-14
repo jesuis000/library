@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  library-app:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:h2:mem:librarydb
+    depends_on:
+      - h2-database
+
+  h2-database:
+    image: oscarfonts/h2
+    ports:
+      - "9092:9092"
+    environment:
+      - H2_OPTIONS=-ifNotExists
